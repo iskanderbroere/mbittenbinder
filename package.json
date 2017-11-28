@@ -1,0 +1,51 @@
+{
+  "name": "matyas",
+  "version": "1.0.0",
+  "description": "matyas",
+  "author": "iskander broere <iskanderbroere@gmail.com>",
+  "private": true,
+  "engines": {
+    "node": ">=8.7.0",
+    "yarn": ">=1.2.0"
+  },
+  "dependencies": {
+    "@nuxtjs/pwa": "^2.0.2",
+    "@nuxtjs/sitemap": "^0.0.3",
+    "bootstrap": "4.0.0-beta.2",
+    "bootstrap-vue": "^1.0.0-beta.9",
+    "nuxt": "1.0.0-rc11",
+    "v-img": "^0.1.2",
+    "vue-awesome": "^2.3.3",
+    "vue-awesome-swiper": "^2.6.7",
+    "vue-cookie-law": "^1.3.0",
+    "vue-i18n": "^7.3.1",
+    "vue-markdown": "^2.2.4",
+    "vue-resource": "^1.3.4",
+    "vue2-filters": "^0.2.2"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "yarn lint"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "babel-eslint": "^8.0.1",
+    "contentful": "^5.0.1",
+    "contentful-management": "^4.0.1",
+    "eslint": "^4.8.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-html": "^4.0.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.2.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "node-sass": "^4.5.3",
+    "postcss-flexbugs-fixes": "^3.2.0",
+    "sass-loader": "^6.0.6"
+  }
+}

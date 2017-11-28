@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Source+Sans+Pro:700,700i');
+$blue: #4A6D8C !default;
+$enable-rounded: false !default;
+$border-width: 2px !default;
+$font-family-body1: 'Merriweather';
+$font-family-heading: 'Source Sans Pro';
+$font-family-sans-serif: $font-family-body1, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$headings-font-weight: 700 !default;
+$card-columns-gap: 30px !default;
+$card-spacer-y: 30px !default;
+$body-bg: #212529 !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 738px,
+  lg: 962px,
+  xl: 1170px
+) !default;
+
+@import
+  "node_modules/bootstrap/scss/bootstrap",
+  "node_modules/bootstrap-vue/dist/bootstrap-vue";
+.container-fluid {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.headtitle {
+  font-size: 42px;
+  font-family: $font-family-heading, $font-family-sans-serif;
+  font-weight: $font-weight-normal;
+}
+.card-title {
+  margin-bottom: .75rem;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2 .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  font-family: $font-family-heading, $font-family-sans-serif;
+  font-weight: $font-weight-bold;
+  text-transform: uppercase !important;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.8rem;
+}
+h3 {
+  font-size: 1.6rem;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+}
+h6 {
+  font-size: 1rem;
+}
+@include media-breakpoint-up(lg) {
+  .nav-link, {
+    font-size: 18px;
+  }
+  .card-columns {
+    column-count: 2;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+  .navbar {
+    padding: .5rem 30px;
+  }
+}
+@include media-breakpoint-only(md) {
+  b-navbar {
+    height: inherit;
+  }
+  .card-columns {
+    column-count: 2;
+  }
+  .headtitle {
+    font-size: 30px;
+  }
+  html {
+  font-size: 14px;
+  }
+  .navbar {
+    padding: .5rem 30px;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .headtitle {
+      font-size: 22px;
+  }
+  .btn-toggler {
+    font-size: 16px;
+  }
+  .card-columns {
+    column-count: 1;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+  .mb30s {
+    margin-bottom: 15px;
+  }
+  .navbar {
+    padding: .5rem 30px;
+  }
+  html {
+  font-size: 14px;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .headtitle {
+      font-size: 20px;
+  }
+  .btn-toggler {
+    font-size: 16px;
+  }
+  .mb30 {
+    margin-bottom: 30px;
+  }
+  .mb30s {
+    margin-bottom: 15px;
+  }
+  html {
+    font-size: 14px;
+  }
+}
+.navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
+	color: #212529;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.7)
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #212529
+}
+html {
+    overflow-y: scroll;
+}
+.nav-link {
+  font-family: $font-family-heading, $font-family-sans-serif;
+  text-transform: uppercase !important;
+}
+.form-control {
+  border: 2px solid #212529;
+}
+.btn-toggler {
+  font-family: $font-family-heading;
+}
+.btn {
+  font-weight: $font-weight-bold;
+  text-transform: uppercase !important;
+}
+.fullscreen-v-img {
+  z-index: 1031;
+}
+.text-muted {
+  color: #4c4c4c!important;
+}

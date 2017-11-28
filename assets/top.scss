@@ -1,0 +1,56 @@
+@include media-breakpoint-up(lg) {
+  .container-top {
+    margin-top: 9.6875rem;
+  }
+  .sticky-top {
+    top: 9.6875rem;
+  }
+  .anchor-link {
+    top: -9.6875rem;
+  }
+  .fixed-top-resp {
+    top: 2rem;
+  }
+}
+@include media-breakpoint-only(md) {
+  .container-top {
+    margin-top: 7.5625rem;
+  }
+  .sticky-top {
+    top: 7.5625rem;
+  }
+  .anchor-link {
+    top: -7.5625rem;
+  }
+  .fixed-top-resp {
+    top: 1.5rem;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .container-top {
+    margin-top: 6.125rem;
+  }
+  .sticky-top {
+    top: 6.125rem;
+  }
+  .anchor-link {
+    top: -6.125rem;
+  }
+  .fixed-top-resp {
+    top: 1rem;
+  }
+}
+@include media-breakpoint-down(xs) {
+  .container-top {
+    margin-top: 6.426rem;
+  }
+  .sticky-top {
+    top: 6.426rem;
+  }
+  .anchor-link {
+    top: -6.426rem;
+  }
+  .fixed-top-resp {
+    top: 1.07rem;
+  }
+}
