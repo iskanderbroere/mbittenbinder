@@ -1,15 +1,19 @@
 <template>
-  <b-navbar class="sticky-top mb30" toggleable="md" type="light" variant="light">
-      <!-- <b-navbar-brand class="headtitle text-uppercase">M&Aacute;ty&Aacute;s Bittenbinder</b-navbar-brand> -->
-      <b-navbar-toggle class="mx-auto" target="nav_collapse" />
-    <b-collapse is-nav id="nav_collapse">
-      <b-navbar-nav class="mx-auto">
-        <b-nav-item active-class="" exact-active-class="active" class="my-auto" to="/"><icon class="m-2" name="home" scale="1.5" /></b-nav-item>
-        <b-nav-item active-class="" exact-active-class="active" class="my-auto" to="/photos"><icon class="m-2" name="camera-retro" scale="1.5" /></b-nav-item>
-        <b-nav-item active-class="" exact-active-class="active" class="my-auto" to="/contact"><icon class="m-2" name="info" scale="1.5" /></b-nav-item>
-        <b-nav-text class="headtitle text-uppercase">M&Aacute;ty&Aacute;s Bittenbinder</b-nav-text>
-      </b-navbar-nav>
-    </b-collapse>
+  <b-navbar sticky class="mb30" toggleable="md" type="light" variant="light">
+    <b-container>
+        <b-navbar-toggle class="mx-auto" target="nav_collapse" />
+      <b-collapse is-nav id="nav_collapse">
+        <b-navbar-nav>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/">Home</b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/photos">Photos</b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/contact">Contact</b-nav-item>
+        </b-navbar-nav>
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.instagram.com" target="_blank"><icon class="m-2" name="instagram" scale="1" /></b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.facebook.com" target="_blank"><icon class="m-2" name="facebook-official" scale="1" /></b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </b-container>
   </b-navbar>
 </template>
 

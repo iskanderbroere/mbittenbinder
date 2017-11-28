@@ -8,9 +8,11 @@
         :img-alt="foto.fields.foto.fields.title"
         bg-variant="dark"
         class="text-center"
-        text-variant="white"      
+        border-variant="white"
+        text-variant="white"
         img-fluid>
-        <b-btn size="lg" block :to="'/photos/'+foto.fields.slug">{{ foto.fields.titel }}</b-btn>
+        <p class="card-text">{{ foto.fields.beschrijving }}</p>
+        <b-btn variant="outline-light" size="lg" block :to="'/photos/'+foto.fields.slug">{{ foto.fields.titel }}</b-btn>
       </b-card>
     </b-card-group>
     <b-pagination-nav v-if="fotos.length > perPage"
