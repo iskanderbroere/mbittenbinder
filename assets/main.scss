@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Source+Sans+Pro:700,700i');
-$blue: #000 !default;
+$blue: #212529 !default;
 $enable-rounded: false !default;
 $border-width: 1px !default;
 $font-family-body1: 'Merriweather';
@@ -10,7 +10,7 @@ $font-weight-bold: 700 !default;
 $headings-font-weight: 700 !default;
 $card-columns-gap: 30px !default;
 $card-spacer-y: 30px !default;
-$body-bg: #000 !default;
+$body-bg: #212529 !default;
 $container-max-widths: (
   sm: 540px,
   md: 738px,
@@ -131,13 +131,13 @@ h6 {
   }
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-brand:focus, .navbar-light .navbar-brand:hover {
-	color: #000;
+	color: #212529;
 }
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.7)
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-  color: #000
+  color: #212529
 }
 html {
     overflow-y: scroll;
@@ -148,7 +148,7 @@ html {
   text-transform: uppercase !important;
 }
 .form-control {
-  border: 1px solid #000;
+  border: 1px solid #212529;
 }
 .btn-toggler {
   font-family: $font-family-heading;
@@ -165,7 +165,7 @@ html {
   color: #4c4c4c!important;
 }
 .bg-dark {
-  background-color: #000 !important;
+  background-color: #212529 !important;
 }
 .b-pagination .page-item .page-link.active:focus {
   box-shadow: 0 0 0 3px rgba(0,0,0,.5);
