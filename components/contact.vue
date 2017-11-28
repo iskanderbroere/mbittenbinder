@@ -5,11 +5,11 @@
     </template>
     <div class="row">
       <div class="col-md-8">
-        <b-card class="mb30s" title="Contactformulier" title-tag="h2">
+        <b-card class="mb30s" title="Contact form" title-tag="h2">
           <b-form id="contactForm" method='post' @submit.prevent="handleForm($event)" name="contact" data-netlify="true">
             <input type='hidden' name='form-name' value='contact' />
             <b-form-group
-              label="Voor- en achternaam"
+              label="Name"
               label-for="name">
                 <b-form-input
                   type="text"
@@ -18,7 +18,7 @@
                   name="name" />
             </b-form-group>
             <b-form-group
-              label="E-mailadres"
+              label="Email address"
               label-for="email">
               <b-form-input
                 type="email"
@@ -26,7 +26,7 @@
                 name="email"
                 required />
             </b-form-group>
-            <b-form-group label="Bericht" label-for="message">
+            <b-form-group label="Message" label-for="message">
               <b-form-textarea
                   v-model="message"
                   name="message"
@@ -35,17 +35,17 @@
                   :max-rows="10">
               </b-form-textarea>
             </b-form-group>
-            <b-button type="submit" required variant="primary" block>Verstuur bericht</b-button>
+            <b-button type="submit" required variant="outline-primary" block>Send</b-button>
           </b-form>
         </b-card>
       </div>
       <div class="col-md-4">
         <address>
-          <b-card title="Contactgegevens" title-tag="h2">
+          <b-card title="Contact details" title-tag="h2">
             <dl>
-              <dt>E-mailadres</dt>
+              <dt>Email address</dt>
               <dd><a href="mailto:info@mbittenbinder.nl">info@mbittenbinder.nl</a></dd>
-              <dt>Telefoonnummer</dt>
+              <dt>Phone number</dt>
               <dd><a href="tel:0031631219802">+31 6 12345678</a></dd>
               <dt>Webdesign</dt>
               <dd><a href="mailto:iskanderbroere@gmail.com">iskanderbroere@gmail.com</a></dd>
