@@ -26,8 +26,7 @@ const config = {
   },
   dev: (process.env.NODE_ENV !== 'production'),
   css: [
-    { src: '~assets/main.scss', lang: 'scss' },
-    'swiper/dist/css/swiper.css'
+    { src: '~assets/main.scss', lang: 'scss' }
   ],
   modules: [
     '@nuxtjs/pwa',
@@ -107,7 +106,7 @@ const config = {
         })
       ]).then(([fotos]) => {
         return [
-          ...fotos.items.map(foto => `/photos/${foto.fields.slug}`)
+          ...fotos.items.map(foto => `/photography/${foto.fields.slug}`)
         ]
       })
     }

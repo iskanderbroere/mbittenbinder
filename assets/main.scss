@@ -20,7 +20,8 @@ $container-max-widths: (
 
 @import
   "node_modules/bootstrap/scss/bootstrap",
-  "node_modules/bootstrap-vue/dist/bootstrap-vue";
+  "node_modules/bootstrap-vue/dist/bootstrap-vue",
+  "node_modules/swiper/dist/css/swiper";
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
@@ -169,4 +170,11 @@ html {
 }
 .b-pagination .page-item .page-link.active:focus {
   box-shadow: 0 0 0 3px rgba(0,0,0,.5);
+}
+.swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+}
+.swiper-button-next, .swiper-button-prev {
+  width: 50px;
 }

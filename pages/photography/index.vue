@@ -12,7 +12,7 @@
         text-variant="white"
         img-fluid>
         <p class="card-text">{{ foto.fields.beschrijving }}</p>
-        <b-btn variant="outline-light" size="lg" block :to="'/photos/'+foto.fields.slug">{{ foto.fields.titel }}</b-btn>
+        <b-btn variant="outline-light" size="lg" block :to="'/photography/'+foto.fields.slug">{{ foto.fields.titel }}</b-btn>
       </b-card>
     </b-card-group>
     <b-pagination-nav v-if="fotos.length > perPage"
@@ -35,7 +35,7 @@ const client = createClient()
 
 export default {
   head: {
-    title: 'Mátyás Bittenbinder - Photos',
+    title: 'Mátyás Bittenbinder - Photography',
     meta: [
       { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
     ]

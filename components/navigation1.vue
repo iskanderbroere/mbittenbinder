@@ -5,7 +5,7 @@
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/">Home</b-nav-item>
-          <b-nav-item class="my-auto py-0" to="/photos">Photos</b-nav-item>
+          <b-nav-item class="my-auto py-0" to="/photography">Photography</b-nav-item>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
