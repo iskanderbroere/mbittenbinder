@@ -9,7 +9,7 @@
                 no-body
                 border-variant="white"
                 header-tag="header">
-                <img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" style="max-height:70vh;object-fit: cover;">
+                <b-img-lazy :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" style="max-height:70vh;object-fit: cover;" fluid-grow width="1885" height="1080" blank-color="#212529" />
               <!-- <div slot="header"><h1>{{ banner.fields.titel }}</h1><p class="text-muted">{{ banner.fields.beschrijving }}</p></div> -->
               </b-card>
             </div>

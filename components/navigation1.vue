@@ -9,8 +9,8 @@
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.instagram.com/mbittenbinder/" target="_blank"><icon class="m-2" name="instagram" scale="1" /></b-nav-item>
-          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.facebook.com" target="_blank"><icon class="m-2" name="facebook-official" scale="1" /></b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.instagram.com/mbittenbinder/" target="_blank"><icon class="mx-2" name="instagram" scale="1" /></b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.facebook.com" target="_blank"><icon class="mx-2" name="facebook-official" scale="1" /></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
     </b-container>
