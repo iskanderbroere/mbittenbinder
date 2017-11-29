@@ -20,7 +20,7 @@ const config = {
     ]
   },
   loading: {
-    color: 'rgba(0, 0, 0, 0.7)',
+    color: '#212529',
     failedColor: '#d9534f',
     height: '2px'
   },
