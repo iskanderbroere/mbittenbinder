@@ -44,7 +44,7 @@
           <b-card title="Contact details" title-tag="h2">
             <dl>
               <dt>Email address</dt>
-              <dd><a href="mailto:info@mbittenbinder.nl">info@mbittenbinder.nl</a></dd>
+              <dd><a href="mailto:mbittenbinder@gmail.com">mbittenbinder@gmail.com</a></dd>
               <dt>Phone number</dt>
               <dd><a href="tel:0031631219802">+31 6 12345678</a></dd>
               <dt>Webdesign</dt>
