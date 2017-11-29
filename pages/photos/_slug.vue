@@ -12,11 +12,13 @@ import {createClient} from '~/plugins/contentful.js'
 const client = createClient()
 
 export default {
-  head: {
-    title: 'Mátyás Bittenbinder',
-    meta: [
-      { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
-    ]
+  head () {
+    return {
+      title: `Mátyás Bittenbinder - Photos - ${this.foto.fields.titel}`,
+      meta: [
+        { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
+      ]
+    }
   },
   layout: 'default-en',
   asyncData ({ env, params }) {

@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Source+Sans+Pro:700,700i');
+@import url('https://fonts.googleapis.com/css?family=Spectral:500,500i,700,700i|Source+Sans+Pro:700,700i');
 $blue: #212529 !default;
 $enable-rounded: false !default;
 $border-width: 1px !default;
-$font-family-body1: 'Merriweather';
-$font-family-heading: 'Source Sans Pro';
+$font-family-body1: 'Spectral';
+$font-family-heading: 'Spectral';
 $font-family-sans-serif: $font-family-body1, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif !default;
-$font-weight-normal: 400 !default;
+$font-weight-normal: 500 !default;
 $font-weight-bold: 700 !default;
 $headings-font-weight: 700 !default;
 $card-columns-gap: 30px !default;
@@ -15,7 +15,7 @@ $container-max-widths: (
   sm: 540px,
   md: 738px,
   lg: 962px,
-  xl: 1170px
+  xl: 1600px
 ) !default;
 
 @import

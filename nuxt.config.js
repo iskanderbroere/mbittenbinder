@@ -19,10 +19,6 @@ const config = {
       { hid: 'description', name: 'description', content: 'Matyas Bittenbinder' }
     ]
   },
-  router: {
-    linkActiveClass: '',
-    linkExactActiveClass: 'active'
-  },
   loading: {
     color: 'rgba(0, 0, 0, 0.7)',
     failedColor: '#d9534f',

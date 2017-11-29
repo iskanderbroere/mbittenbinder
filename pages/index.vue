@@ -1,17 +1,15 @@
 <template>
-  <b-container class="h-50">
+  <b-container>
     <b-row>
       <div class="col-12 mb30">
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper my-swiper">
             <div class="swiper-slide" v-for="banner in albums" :key="banner.sys.id">
-              <b-card :img-src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`"
-                :img-alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title"
-                img-bottom
-                class="mh-50"
+              <b-card
                 no-body
                 border-variant="white"
                 header-tag="header">
+                <img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" style="max-height:70vh;object-fit: cover;">
               <!-- <div slot="header"><h1>{{ banner.fields.titel }}</h1><p class="text-muted">{{ banner.fields.beschrijving }}</p></div> -->
               </b-card>
             </div>

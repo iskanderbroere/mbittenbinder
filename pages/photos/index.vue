@@ -35,7 +35,7 @@ const client = createClient()
 
 export default {
   head: {
-    title: 'Mátyás Bittenbinder - Home',
+    title: 'Mátyás Bittenbinder - Photos',
     meta: [
       { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
     ]

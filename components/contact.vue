@@ -1,5 +1,5 @@
 <template>
-  <b-jumbotron fluid :header-level="4">
+  <b-jumbotron bg-variant="light" fluid :header-level="4">
     <template slot="header" class="mb30">
       Contact
     </template>
@@ -81,10 +81,10 @@ export default {
       this.$http.options.headers = {
         'Content-Type': 'application/x-www-form-urlencoded'
       }
-      this.$http.post('/bedankt', body, {
+      this.$http.post('/thank-you', body, {
         emulateJSON: true
       }).then(response => {
-        this.$router.push('/bedankt')
+        this.$router.push('/thank-you')
       }, response => {})
     }
   }
