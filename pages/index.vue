@@ -6,11 +6,18 @@
           <div class="swiper-wrapper my-swiper">
             <div class="swiper-slide" v-for="banner in albums" :key="banner.sys.id">
               <b-card
+                bg-variant="dark"
+                class="text-center"
                 no-body
+                text-variant="white"
                 border-variant="white"
                 header-tag="header">
+                <div class="card-body">
+                  <h1 class="card-title">{{ banner.fields.titel }}</h1>
+                  <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p>
+                  <b-btn variant="outline-light">More</b-btn>
+                </div>
                 <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid-grow />
-              <!-- <div slot="header"><h1>{{ banner.fields.titel }}</h1><p class="text-muted">{{ banner.fields.beschrijving }}</p></div> -->
               </b-card>
             </div>
           </div>
@@ -67,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
+.card-img-bottom {
   max-height: 70vh;
   object-fit: cover;
 }

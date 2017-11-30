@@ -5,7 +5,6 @@ require([
   'vue-awesome/icons/home',
   'vue-awesome/icons/question-circle',
   'vue-awesome/icons/linkedin-square',
-  'vue-awesome/icons/envelope',
   'vue-awesome/icons/instagram'
 ])
 
