@@ -17,11 +17,13 @@
                   <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p>
                   <b-btn variant="outline-light">More</b-btn>
                 </div>
-                <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid-grow />
+                <div class="swiper-zoom-container">
+                  <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid-grow />
+                </div>
               </b-card>
             </div>
           </div>
-          <div class="swiper-pagination swiper-pagination-white swiper-pagination-bullets"></div>
+          <div class="swiper-pagination swiper-pagination-white" slot="pagination"></div>
           <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
           <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
         </div>
@@ -48,20 +50,25 @@ export default {
       return {
         albums: albums.items,
         swiperOption: {
-          autoplay: 5000,
+          autoplay: {
+            delay: 3500
+          },
           initialSlide: 0,
           direction: 'horizontal',
           setWrapperSize: true,
-          keyboardControl: true,
-          pagination: '.swiper-pagination',
-          paginationClickable: true,
-          prevButton: '.swiper-button-prev',
-          nextButton: '.swiper-button-next',
-          paginationElement: 'li',
-          preloadImages: false,
+          keyboard: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          },
           spaceBetween: 30,
-          lazyLoading: true,
           loop: true,
+          grabCursor: true,
           speed: 800
         }
       }
