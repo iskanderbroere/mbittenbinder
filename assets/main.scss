@@ -174,7 +174,16 @@ html {
 .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
+  background: #fff;
+  opacity: 0.4;
 }
 .swiper-button-next, .swiper-button-prev {
   width: 50px;
+}
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 25px;
+}
+.swiper-pagination-white .swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
 }

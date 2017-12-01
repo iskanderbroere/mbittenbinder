@@ -60,7 +60,7 @@ export default {
           pagination: {
             el: '.swiper-pagination',
             clickable: true,
-            dynamicBullets: true
+            dynamicBullets: albums.items.length > 8
           },
           navigation: {
             nextEl: '.swiper-button-next',
@@ -68,7 +68,6 @@ export default {
           },
           spaceBetween: 30,
           loop: true,
-          grabCursor: true,
           speed: 800
         }
       }
