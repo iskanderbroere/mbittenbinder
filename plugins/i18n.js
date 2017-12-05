@@ -36,6 +36,6 @@ export default ({ app, isClient, store }) => {
   // This way we can use it in middleware and pages asyncData/fetch
   app.i18n = new VueI18n({
     dateTimeFormats: dateTimeFormats,
-    fallbackLocale: 'nl'
+    fallbackLocale: 'en'
   })
 }

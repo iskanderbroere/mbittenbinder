@@ -82,16 +82,12 @@ const config = {
       '~/plugins/vue-awesome',
       '~/plugins/bootstrap',
       '~/plugins/contentful',
-      '~/plugins/vue-awesome-swiper',
-      '~/plugins/i18n',
-      '~/plugins/vue2-filters'
+      '~/plugins/vue-awesome-swiper'
     ]
   },
   plugins: [
     '~/plugins/contentful',
     '~/plugins/bootstrap',
-    '~/plugins/i18n',
-    '~/plugins/vue2-filters',
     '~/plugins/vue-awesome',
     { src: '~/plugins/vue-awesome-swiper', ssr: false },
     { src: '~/plugins/vue-resource', ssr: false }
