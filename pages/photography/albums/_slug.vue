@@ -2,7 +2,7 @@
   <b-container>
       <h1 class="text-white">{{ album.fields.titel }}</h1>
       <b-card-group columns class="mb30">
-        <b-card v-for="albumfoto in album"
+        <b-card v-for="albumfoto in album.fields.fotosInAlbum"
           :key="albumfoto.sys.id"
           :img-src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
           :img-alt="albumfoto.fields.foto.fields.title"

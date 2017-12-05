@@ -2,7 +2,7 @@
   <main>
     <b-container>
       <div v-for="album in albums" :key="album.sys.id">
-        <h1 class="text-white">{{ album.fields.titel }}</h1>
+        <h1><b-link class="text-white" :to="'/photography/albums/'+album.fields.slug">{{ album.fields.titel }}</b-link></h1>
         <b-card-group columns class="mb30">
           <b-card v-for="albumfoto in album.fields.fotosInAlbum"
             :key="albumfoto.sys.id"
