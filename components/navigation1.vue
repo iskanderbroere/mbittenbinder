@@ -30,14 +30,12 @@ export default {
 <style scoped lang="scss">
 .active {
   transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1);
-  border-bottom: 1px solid #212931;
-  box-shadow: inset 0 -2px 0px 0px #212931;
+  border-bottom: 1px solid #212529;
+  box-shadow: inset 0 -2px 0px 0px #212529;
 }
 .fa-icon {
   width: auto;
-  height: 1em; /* or any other relative font sizes */
-
-  /* You would have to include the following two lines to make this work in Safari */
+  height: 1em;
   max-width: 100%;
   max-height: 100%;
 }
