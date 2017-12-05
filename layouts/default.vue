@@ -1,6 +1,6 @@
 <template>
   <main>
-    <b-navbar type="dark" variant="dark">
+    <b-navbar class="d-none d-md-flex" type="dark" variant="dark">
       <b-navbar-brand class="mx-auto headtitle text-uppercase">M&Aacute;ty&Aacute;s Bittenbinder</b-navbar-brand>
     </b-navbar>
     <navigation />

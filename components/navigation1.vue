@@ -1,7 +1,8 @@
 <template>
   <b-navbar sticky class="mb30" toggleable="md" type="light" variant="light">
     <b-container>
-        <b-navbar-toggle class="mx-auto" target="nav_collapse" />
+      <b-navbar-brand class="headtitle text-uppercase d-block d-md-none">M&Aacute;ty&Aacute;s Bittenbinder</b-navbar-brand>
+      <b-navbar-toggle class="ml-auto" target="nav_collapse" />
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/">Home</b-nav-item>

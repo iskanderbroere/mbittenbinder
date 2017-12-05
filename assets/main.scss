@@ -96,7 +96,7 @@ h6 {
 }
 @include media-breakpoint-only(sm) {
   .headtitle {
-      font-size: 22px;
+    font-size: 24px;
   }
   .btn-toggler {
     font-size: 16px;
@@ -119,7 +119,7 @@ h6 {
 }
 @include media-breakpoint-down(xs) {
   .headtitle {
-      font-size: 20px;
+    font-size: 14px;
   }
   .btn-toggler {
     font-size: 16px;
@@ -144,7 +144,7 @@ h6 {
   color: #212529
 }
 html {
-    overflow-y: scroll;
+  overflow-y: scroll;
 }
 .nav-link {
   font-family: $font-family-heading, $font-family-sans-serif;
