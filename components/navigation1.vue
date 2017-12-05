@@ -6,6 +6,12 @@
         <b-navbar-nav>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/">Home</b-nav-item>
           <b-nav-item class="my-auto py-0" to="/photography">Photography</b-nav-item>
+          <b-nav-item-dropdown text="Photography">
+            <b-dropdown-item href="#">EN</b-dropdown-item>
+            <b-dropdown-item href="#">ES</b-dropdown-item>
+            <b-dropdown-item href="#">RU</b-dropdown-item>
+            <b-dropdown-item href="#">FA</b-dropdown-item>
+          </b-nav-item-dropdown>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">

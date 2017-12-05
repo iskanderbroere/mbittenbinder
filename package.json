@@ -25,6 +25,8 @@
   },
   "scripts": {
     "dev": "nuxt",
+    "u": "yarn upgrade-interactive",
+    "o": "yarn outdated",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "babel-eslint": "^8.0.1",
+    "caniuse-lite": "^1.0.30000778",
     "contentful": "^5.0.1",
     "contentful-management": "^4.0.1",
     "eslint": "^4.8.0",
