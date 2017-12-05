@@ -70,6 +70,9 @@ h6 {
   .navbar {
     padding: .5rem 30px;
   }
+  .headtitle {
+    font-size: 2rem;
+  }
 }
 @include media-breakpoint-only(md) {
   b-navbar {
@@ -79,7 +82,7 @@ h6 {
     column-count: 2;
   }
   .headtitle {
-    font-size: 30px;
+    font-size: 2rem;
   }
   html {
   font-size: 14px;
