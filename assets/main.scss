@@ -62,7 +62,7 @@ h6 {
     font-size: 18px;
   }
   .card-columns {
-    column-count: 2;
+    column-count: 3;
   }
   .mb30 {
     margin-bottom: 30px;
@@ -161,6 +161,7 @@ html {
   font-weight: $font-weight-bold;
   font-family: $font-family-heading;
   text-transform: uppercase !important;
+  white-space: normal;
 }
 .fullscreen-v-img {
   z-index: 1031;
