@@ -71,7 +71,7 @@ export default {
           speed: 800
         }
       }
-    }).catch(console.error)
+    })
   },
   components: {
     VueMarkdown

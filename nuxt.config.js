@@ -100,13 +100,13 @@ const config = {
   generate: {
     routes () {
       return Promise.all([
-        // get all blog posts
         cdaClient.getEntries({
-          'content_type': ctfConfig.CTF_FOTO_POST_TYPE_ID
+          'content_type': ctfConfig.CTF_ALBUM
         })
-      ]).then(([fotos]) => {
+      ]).then(([albums]) => {
         return [
-          ...fotos.items.map(foto => `/photography/${foto.fields.slug}`)
+          ...albums.items.map(album => `/photography/albums/${album.fields.slug}`),
+          ...albums.items.fields.fotosInAlbum.map(albumfoto => `/photography/i/${albumfoto.fields.slug}`)
         ]
       })
     }
