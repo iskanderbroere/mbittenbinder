@@ -10,7 +10,7 @@ export default {
     return {
       title: 'Mátyás Bittenbinder - Contact',
       meta: [
-        { hid: 'description', name: 'description', content: 'Contact form and details' }
+        { hid: 'description', name: 'description', content: 'Contact form and contact details' }
       ]
     }
   },

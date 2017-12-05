@@ -26,7 +26,7 @@ const client = createClient()
 export default {
   head () {
     return {
-      title: `Mátyás Bittenbinder - Albums - ${this.album.fields.titel}`,
+      title: `Mátyás Bittenbinder - ${this.album.fields.titel}`,
       meta: [
         { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
       ]

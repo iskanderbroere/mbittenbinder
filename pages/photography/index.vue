@@ -40,7 +40,7 @@ export default {
   head: {
     title: 'Mátyás Bittenbinder - Photography',
     meta: [
-      { hid: 'description', name: 'description', content: 'Mátyás Bittenbinder' }
+      { hid: 'description', name: 'description', content: 'All photographs by Mátyás Bittenbinder' }
     ]
   },
   asyncData ({env}) {
