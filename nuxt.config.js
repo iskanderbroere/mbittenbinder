@@ -94,19 +94,21 @@ const config = {
     '~/plugins/vue2-filters',
     '~/plugins/vue-awesome',
     { src: '~/plugins/vue-awesome-swiper', ssr: false },
-    { src: '~/plugins/vue-resource', ssr: false },
-    { src: '~/plugins/v-img', ssr: false }
+    { src: '~/plugins/vue-resource', ssr: false }
   ],
   generate: {
     routes () {
       return Promise.all([
         cdaClient.getEntries({
           'content_type': ctfConfig.CTF_ALBUM
+        }),
+        cdaClient.getEntries({
+          'content_type': ctfConfig.CTF_FOTO_POST_TYPE_ID
         })
-      ]).then(([albums]) => {
+      ]).then(([albums, fotos]) => {
         return [
           ...albums.items.map(album => `/photography/albums/${album.fields.slug}`),
-          ...albums.items.fields.fotosInAlbum.map(albumfoto => `/photography/i/${albumfoto.fields.slug}`)
+          ...fotos.items.map(foto => `/photography/i/${foto.fields.slug}`)
         ]
       })
     }

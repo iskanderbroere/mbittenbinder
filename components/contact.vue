@@ -45,12 +45,14 @@
             <dl>
               <dt>Email address</dt>
               <dd><a href="mailto:mbittenbinder@gmail.com">mbittenbinder@gmail.com</a></dd>
-              <dt>Phone number</dt>
-              <dd><a href="tel:0031631219802">+31 6 12345678</a></dd>
+              <dt>LinkedIn</dt>
+              <dd><a href="https://www.linkedin.com/in/matyas-bittenbinder-86631987">www.linkedin.com/in/matyas-bittenbinder-86631987</a></dd>
+              <dt>Instagram</dt>
+              <dd><a href="https://www.instagram.com/mbittenbinder/">www.instagram.com/mbittenbinder/</a></dd>
+              <!-- <dt>Phone number</dt>
+              <dd><a href="tel:0031631219802">+31 6 12345678</a></dd> -->
               <dt>Webdesign</dt>
               <dd><a href="mailto:iskanderbroere@gmail.com">iskanderbroere@gmail.com</a></dd>
-              <dt>Sitemap</dt>
-              <dd><nuxt-link to="/sitemap">Sitemap</nuxt-link></dd>
             </dl>
           </b-card>
         </address>

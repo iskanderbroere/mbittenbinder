@@ -20,7 +20,6 @@ export default {
       ]
     }
   },
-  layout: 'default-en',
   asyncData ({ env, params }) {
     return client.getEntries({
       'content_type': env.CTF_FOTO_POST_TYPE_ID,
