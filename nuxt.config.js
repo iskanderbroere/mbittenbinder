@@ -39,7 +39,7 @@ const config = {
     mobileApp: false
   },
   sitemap: {
-    hostname: 'https://mbittenbinder.nl/',
+    hostname: 'https://mbittenbinder.com/',
     generate: true
   },
   cache: true,
