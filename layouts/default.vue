@@ -10,9 +10,7 @@
     <footer>
       <no-ssr>
         <CookieLaw
-          message="Om deze website goed te laten werken worden er cookies gebruikt."
-          buttonClass="btn btn-lg btn-primary"
-          buttonText="Ik snap het!" />
+          buttonClass="btn btn-lg btn-primary" />
       </no-ssr>
     </footer>
   </main>
@@ -24,11 +22,11 @@ import CookieLaw from 'vue-cookie-law'
 export default {
   metaInfo: {
     htmlAttrs: {
-      lang: 'nl-NL'
+      lang: 'en'
     }
   },
   manifest: {
-    lang: 'nl-NL'
+    lang: 'en'
   },
   components: {
     navigation,
