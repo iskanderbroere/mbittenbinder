@@ -14,11 +14,11 @@
                 header-tag="header">
                 <div class="card-body">
                   <h1 class="card-title">{{ banner.fields.titel }}</h1>
-                  <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p>
-                  <b-btn variant="outline-light" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
+                  <!-- <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p> -->
+                  <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
                 </div>
                 <div class="swiper-zoom-container">
-                  <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&f=bottom&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid-grow />
+                  <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid />
                 </div>
               </b-card>
             </div>
@@ -55,7 +55,7 @@ export default {
           },
           initialSlide: 0,
           direction: 'horizontal',
-          setWrapperSize: true,
+          autoHeight: true,
           keyboard: true,
           pagination: {
             el: '.swiper-pagination',
@@ -82,6 +82,8 @@ export default {
 <style lang="scss" scoped>
 .card-img-bottom {
   max-height: 70vh;
-  object-fit: cover;
+}
+.card {
+  border: none;
 }
 </style>

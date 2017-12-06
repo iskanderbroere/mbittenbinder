@@ -1289,9 +1289,13 @@ caniuse-lite@^1.0.30000760:
   version "1.0.30000777"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000777.tgz#31c18a4a8cd49782ebb305c8e8a93e6b3b3e4f13"
 
-caniuse-lite@^1.0.30000770, caniuse-lite@^1.0.30000777, caniuse-lite@^1.0.30000778:
+caniuse-lite@^1.0.30000770, caniuse-lite@^1.0.30000777:
   version "1.0.30000778"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000778.tgz#f1e7cb8b13b1f6744402291d75f0bcd4c3160369"
+
+caniuse-lite@^1.0.30000778:
+  version "1.0.30000780"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000780.tgz#1f9095f2efd4940e0ba6c5992ab7a9b64cc35ba4"
 
 caseless@~0.11.0:
   version "0.11.0"
