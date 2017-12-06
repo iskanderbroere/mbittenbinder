@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <b-container fluid>
     <b-row>
       <div class="col-12 mb30">
         <div v-swiper:mySwiper="swiperOption">
@@ -18,7 +18,7 @@
                   <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
                 </div>
                 <div class="swiper-zoom-container">
-                  <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid />
+                  <b-img :src="`${banner.fields.fotosInAlbum[0].fields.foto.fields.file.url}?w=1885&h=1080&fit=fill`" :alt="banner.fields.fotosInAlbum[0].fields.foto.fields.title" class="card-img-bottom" fluid-grow />
                 </div>
               </b-card>
             </div>
@@ -56,6 +56,7 @@ export default {
           initialSlide: 0,
           direction: 'horizontal',
           autoHeight: true,
+          setWrapperSize: true,
           keyboard: true,
           pagination: {
             el: '.swiper-pagination',
@@ -82,8 +83,6 @@ export default {
 <style lang="scss" scoped>
 .card-img-bottom {
   max-height: 70vh;
-}
-.card {
-  border: none;
+  object-fit: cover;
 }
 </style>
