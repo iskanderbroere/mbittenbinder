@@ -48,7 +48,7 @@
               <dt>LinkedIn</dt>
               <dd><a href="https://www.linkedin.com/in/matyas-bittenbinder-86631987" target="_blank">www.linkedin.com/in/matyas-bittenbinder-86631987</a></dd>
               <dt>Instagram</dt>
-              <dd><a href="https://www.instagram.com/mbittenbinder/" target="_blank">www.instagram.com/mbittenbinder/</a></dd>
+              <dd><a href="https://www.instagram.com/mbittenbinderphotos/" target="_blank">www.instagram.com/mbittenbinderphotos/</a></dd>
               <!-- <dt>Phone number</dt>
               <dd><a href="tel:0031631219802">+31 6 12345678</a></dd> -->
               <dt>Webdesign</dt>
