@@ -18,7 +18,7 @@
                   <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
                 </div>
                 <div class="swiper-zoom-container">
-                  <b-img :src="`${banner.fields.slideImage.fields.file.url}?w=1885&h=1080&fit=fill`" :alt="banner.fields.slideImage.fields.title" class="card-img-bottom" fluid-grow />
+                  <b-img :src="`${banner.fields.slideImage.fields.file.url}?w=942&h=540&fit=fill`" :alt="banner.fields.slideImage.fields.title" class="card-img-bottom" fluid-grow />
                 </div>
               </b-card>
             </div>
