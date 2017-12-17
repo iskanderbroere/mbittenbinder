@@ -10,7 +10,7 @@
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" to="/contact">Contact</b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.instagram.com/mbittenbinder/" target="_blank"><icon class="mx-2 align-middle" name="instagram" scale="1.4" /></b-nav-item>
+          <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.instagram.com/mbittenbinderphotos/" target="_blank"><icon class="mx-2 align-middle" name="instagram" scale="1.4" /></b-nav-item>
           <b-nav-item active-class="" exact-active-class="active" class="my-auto py-0" href="https://www.linkedin.com/in/matyas-bittenbinder-86631987" target="_blank"><icon class="mx-2 align-middle" name="linkedin-square" scale="1.4" /></b-nav-item>
         </b-navbar-nav>
       </b-collapse>
