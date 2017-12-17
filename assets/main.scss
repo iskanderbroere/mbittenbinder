@@ -1,10 +1,27 @@
-@import url('https://fonts.googleapis.com/css?family=Spectral:500,700');
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Spectral Medium'), local('Spectral-Medium'),
+    url('~/assets/fonts/spectral-v4-latin-500.woff2') format('woff2'),
+    url('~/assets/fonts/spectral-v4-latin-500.woff') format('woff'),
+    url('~/assets/fonts/spectral-v4-latin-500.ttf') format('truetype')
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Spectral Bold'), local('Spectral-Bold'),
+    url('~/assets/fonts/spectral-v4-latin-700.woff2') format('woff2'),
+    url('~/assets/fonts/spectral-v4-latin-700.woff') format('woff'),
+    url('~/assets/fonts/spectral-v4-latin-700.ttf') format('truetype')
+}
 $blue: #212529 !default;
 $enable-rounded: false !default;
 $border-width: 1px !default;
 $font-family-body1: 'Spectral';
 $font-family-heading: 'Spectral';
-$font-family-sans-serif: $font-family-body1, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, “Fira Sans”, “Droid Sans”, “Helvetica Neue”, Arial, sans-serif !default;
+$font-family-sans-serif: $font-family-body1, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif !default;
 $font-weight-normal: 500 !default;
 $font-weight-bold: 700 !default;
 $headings-font-weight: 700 !default;
