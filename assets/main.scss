@@ -21,7 +21,7 @@ $enable-rounded: false !default;
 $border-width: 1px !default;
 $font-family-body1: 'Spectral';
 $font-family-heading: 'Spectral';
-$font-family-sans-serif: $font-family-body1, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif !default;
+$font-family-serif: $font-family-body1, Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif !default;
 $font-weight-normal: 500 !default;
 $font-weight-bold: 700 !default;
 $headings-font-weight: 700 !default;
@@ -45,14 +45,14 @@ $container-max-widths: (
 }
 .headtitle {
   // font-size: 42px;
-  font-family: $font-family-heading, $font-family-sans-serif;
+  font-family: $font-family-heading, $font-family-serif;
   font-weight: $font-weight-bold;
 }
 .card-title {
   margin-bottom: .75rem;
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2 .h3, .h4, .h5, .h6, .display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
-  font-family: $font-family-heading, $font-family-sans-serif;
+  font-family: $font-family-heading, $font-family-serif;
   font-weight: $font-weight-bold;
   text-transform: uppercase !important;
 }
@@ -164,7 +164,7 @@ html {
   overflow-y: scroll;
 }
 .nav-link {
-  font-family: $font-family-heading, $font-family-sans-serif;
+  font-family: $font-family-heading, $font-family-serif;
   font-weight: $font-weight-bold;
   text-transform: uppercase !important;
 }
