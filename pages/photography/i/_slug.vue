@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-img class="mb30 mx-auto d-block" :src="foto.fields.foto.fields.file.url" fluid :alt="foto.fields.foto.fields.title" />
-    <h1 class="text-white text-center">{{ 'https://mbittenbinder.com' + this.$route.fullPath }}</h1>
+    <h1 class="text-white text-center">{{ foto.fields.titel }}</h1>
     <p class="text-white text-center">{{ foto.fields.beschrijving }}</p>
   </b-container>
 </template>
