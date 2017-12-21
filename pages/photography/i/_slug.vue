@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <b-img class="mb30 mx-auto d-block" :src="foto.fields.foto.fields.file.url" fluid :alt="foto.fields.foto.fields.title" />
+    <b-img class="mb30 mx-auto d-block" :src="`${foto.fields.foto.fields.file.url}?w=950`" fluid :alt="foto.fields.foto.fields.title" />
     <h1 class="text-white text-center">{{ foto.fields.titel }}</h1>
     <p class="text-white text-center">{{ foto.fields.beschrijving }}</p>
   </b-container>
@@ -20,13 +20,13 @@ export default {
         // Google+ / Schema.org
         { itemprop: 'name', content: this.foto.fields.titel },
         { itemprop: 'description', content: this.foto.fields.beschrijving },
-        { itemprop: 'image', content: 'https:' + this.foto.fields.foto.fields.file.url },
+        { itemprop: 'image', content: 'https:' + this.foto.fields.foto.fields.file.url + '?w=950' },
         // Facebook / Open Graph
         { property: 'og:type', content: 'article' },
         { property: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.fullPath}` },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:title', content: this.foto.fields.titel },
-        { property: 'og:image', content: 'https:' + this.foto.fields.foto.fields.file.url },
+        { property: 'og:image', content: 'https:' + this.foto.fields.foto.fields.file.url + '?w=950' },
         { property: 'og:description', content: this.foto.fields.beschrijving }
       ]
     }
