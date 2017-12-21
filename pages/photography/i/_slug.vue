@@ -20,13 +20,13 @@ export default {
         // Google+ / Schema.org
         { itemprop: 'name', content: this.foto.fields.titel },
         { itemprop: 'description', content: this.foto.fields.beschrijving },
-        { itemprop: 'image', content: this.foto.fields.foto.fields.file.url },
+        { itemprop: 'image', content: 'https:' + this.foto.fields.foto.fields.file.url },
         // Facebook / Open Graph
         { property: 'og:type', content: 'article' },
         { property: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.fullPath}` },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:title', content: this.foto.fields.titel },
-        { property: 'og:image', content: this.foto.fields.foto.fields.file.url },
+        { property: 'og:image', content: 'https:' + this.foto.fields.foto.fields.file.url },
         { property: 'og:description', content: this.foto.fields.beschrijving }
       ]
     }
