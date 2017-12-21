@@ -30,11 +30,6 @@ export default {
       ]
     }
   },
-  meta: {
-    ogType: 'article',
-    ogTitle: this.foto.fields.titel,
-    ogDescription: this.foto.fields.beschrijving
-  },
   asyncData ({ env, params }) {
     return client.getEntries({
       'content_type': env.CTF_FOTO_POST_TYPE_ID,
