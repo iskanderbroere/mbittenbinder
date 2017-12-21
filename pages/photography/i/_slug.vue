@@ -22,11 +22,11 @@ export default {
         { itemprop: 'description', content: `${this.foto.fields.beschrijving}` },
         { itemprop: 'image', content: `${this.foto.fields.foto.fields.file.url}` },
         // Facebook / Open Graph
-        { p: 'og:type', content: 'article' },
-        { p: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.fullPath}` },
-        { p: 'og:locale', content: 'en_US' },
-        { p: 'og:title', content: `${this.foto.fields.titel}` },
-        { p: 'og:image', c: `${this.foto.fields.foto.fields.file.url}` }
+        { property: 'og:type', content: 'article' },
+        { property: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.fullPath}` },
+        { property: 'og:locale', content: 'en_US' },
+        { property: 'og:title', content: `${this.foto.fields.titel}` },
+        { property: 'og:image', c: `${this.foto.fields.foto.fields.file.url}` }
       ]
     }
   },
