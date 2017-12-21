@@ -26,7 +26,8 @@ export default {
         { property: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.path}` },
         { property: 'og:locale', content: 'en_US' },
         { property: 'og:title', content: this.foto.fields.titel },
-        { property: 'og:image', content: 'https:' + this.foto.fields.foto.fields.file.url + '?w=950' }
+        { property: 'og:image', content: 'https:' + this.foto.fields.foto.fields.file.url + '?w=950' },
+        { property: 'og:description', content: this.foto.fields.beschrijving ? this.foto.fields.beschrijving : this.foto.fields.titel }
       ]
     }
   },
