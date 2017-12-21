@@ -38,7 +38,7 @@ const config = {
     short_name: 'M. Bittenbinder',
     mobileApp: false
   },
-  meta : {
+  meta: {
     mobileApp: false
   },
   sitemap: {

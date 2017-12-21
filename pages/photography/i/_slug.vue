@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-img class="mb30 mx-auto d-block" :src="foto.fields.foto.fields.file.url" fluid :alt="foto.fields.foto.fields.title" />
-    <h1 class="text-white text-center">{{ foto.fields.titel}}</h1>
+    <h1 class="text-white text-center">{{ foto.fields.titel }}</h1>
     <p class="text-white text-center">{{ foto.fields.beschrijving }}</p>
   </b-container>
 </template>
@@ -16,7 +16,17 @@ export default {
     return {
       title: `Mátyás Bittenbinder - ${this.foto.fields.titel}`,
       meta: [
-        { hid: 'description', name: 'description', content: `${this.foto.fields.beschrijving}` }
+        { hid: 'description', name: 'description', content: `${this.foto.fields.beschrijving}` },
+        // Google+ / Schema.org
+        { itemprop: 'name', content: `${this.foto.fields.titel}` },
+        { itemprop: 'description', content: `${this.foto.fields.beschrijving}` },
+        { itemprop: 'image', content: `${this.foto.fields.foto.fields.file.url}` },
+        // Facebook / Open Graph
+        { p: 'og:type', content: 'article' },
+        { p: 'og:url', content: 'https://mbittenbinder.com' + `${this.$route.fullPath}` },
+        { p: 'og:locale', content: 'en_US' },
+        { p: 'og:title', content: `${this.foto.fields.titel}` },
+        { p: 'og:image', c: `${this.foto.fields.foto.fields.file.url}` }
       ]
     }
   },
