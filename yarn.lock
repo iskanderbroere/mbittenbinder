@@ -1289,7 +1289,11 @@ caniuse-lite@^1.0.30000760:
   version "1.0.30000777"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000777.tgz#31c18a4a8cd49782ebb305c8e8a93e6b3b3e4f13"
 
-caniuse-lite@^1.0.30000778, caniuse-lite@^1.0.30000780, caniuse-lite@^1.0.30000783:
+caniuse-lite@^1.0.30000778:
+  version "1.0.30000784"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000784.tgz#129ced74e9a1280a441880b6cd2bce30ef59e6c0"
+
+caniuse-lite@^1.0.30000780, caniuse-lite@^1.0.30000783:
   version "1.0.30000783"
   resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30000783.tgz#9b5499fb1b503d2345d12aa6b8612852f4276ffd"
 
@@ -2257,7 +2261,7 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.5.0, eslint@^4.8.0:
+eslint@^4.0.0, eslint@^4.8.0:
   version "4.13.1"
   resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.13.1.tgz#0055e0014464c7eb7878caf549ef2941992b444f"
   dependencies:
@@ -2829,7 +2833,7 @@ globule@^1.0.0:
     lodash "~4.17.4"
     minimatch "~3.0.2"
 
-got@^7.0.0:
+got@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/got/-/got-7.1.0.tgz#05450fd84094e6bbea56f451a43a9c289166385a"
   dependencies:
@@ -4406,8 +4410,8 @@ p-locate@^2.0.0:
     p-limit "^1.1.0"
 
 p-timeout@^1.1.1:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-1.2.0.tgz#9820f99434c5817868b4f34809ee5291660d5b6c"
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/p-timeout/-/p-timeout-1.2.1.tgz#5eb3b353b7fce99f101a1038880bb054ebbea386"
   dependencies:
     p-finally "^1.0.0"
 
@@ -5148,28 +5152,24 @@ preserve@^0.2.0:
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
 prettier-eslint@^8.2.2:
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.3.1.tgz#406f702b5a0790c3ced11942d54e5ff22d9bc984"
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/prettier-eslint/-/prettier-eslint-8.5.0.tgz#ec9c2d1538af18b09622d8abfa1052730dffa47b"
   dependencies:
     common-tags "^1.4.0"
     dlv "^1.1.0"
-    eslint "^4.5.0"
+    eslint "^4.0.0"
     indent-string "^3.2.0"
     lodash.merge "^4.6.0"
     loglevel-colored-level-prefix "^1.0.0"
-    prettier "^1.9.0"
-    pretty-format "^21.2.1"
+    prettier "^1.7.0"
+    pretty-format "^22.0.3"
     require-relative "^0.8.7"
     typescript "^2.5.1"
-    typescript-eslint-parser "^8.0.0"
+    typescript-eslint-parser "^11.0.0"
 
 prettier@^1.7.0:
   version "1.7.4"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.7.4.tgz#5e8624ae9363c80f95ec644584ecdf55d74f93fa"
-
-prettier@^1.9.0:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.9.2.tgz#96bc2132f7a32338e6078aeb29727178c6335827"
 
 pretty-error@^2.0.2, pretty-error@^2.1.1:
   version "2.1.1"
@@ -5178,9 +5178,9 @@ pretty-error@^2.0.2, pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
-pretty-format@^21.2.1:
-  version "21.2.1"
-  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-21.2.1.tgz#ae5407f3cf21066cd011aa1ba5fce7b6a2eddb36"
+pretty-format@^22.0.3:
+  version "22.0.3"
+  resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-22.0.3.tgz#a2bfa59fc33ad24aa4429981bb52524b41ba5dd7"
   dependencies:
     ansi-regex "^3.0.0"
     ansi-styles "^3.2.0"
@@ -6222,9 +6222,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@^8.0.0:
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-8.0.1.tgz#e8cac537d996e16c3dbb0d7c4d509799e67afe0c"
+typescript-eslint-parser@^11.0.0:
+  version "11.0.0"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-11.0.0.tgz#37dba6a0130dd307504aa4b4b21b0d3dc7d4e9f2"
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.4.1"
@@ -6441,8 +6441,8 @@ vue-hot-reload-api@^2.2.0:
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.2.0.tgz#9a21b35ced3634434a43ee80efb7350ea8fb206d"
 
 vue-i18n@^7.3.1:
-  version "7.3.2"
-  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-7.3.2.tgz#1205bb8811323fd5c44e57e4fd619beaf2f7a9a1"
+  version "7.3.3"
+  resolved "https://registry.yarnpkg.com/vue-i18n/-/vue-i18n-7.3.3.tgz#e162431fef05daae1a9b9b3992ac5be238eff954"
 
 vue-loader@^13.0.4:
   version "13.3.0"
@@ -6489,10 +6489,10 @@ vue-meta@^1.1.0:
     object-assign "^4.1.1"
 
 vue-resource@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.3.4.tgz#9fc0bdf6a2f5cab430129fc99d347b3deae7b099"
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/vue-resource/-/vue-resource-1.3.5.tgz#021d8713e9d86a77e83169dfdd8eab6047369a71"
   dependencies:
-    got "^7.0.0"
+    got "^7.1.0"
 
 vue-router@^2.7.0:
   version "2.8.1"
