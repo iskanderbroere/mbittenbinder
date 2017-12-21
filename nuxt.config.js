@@ -38,6 +38,9 @@ const config = {
     short_name: 'M. Bittenbinder',
     mobileApp: false
   },
+  meta : {
+    mobileApp: false
+  },
   sitemap: {
     hostname: 'https://mbittenbinder.com/',
     generate: true
