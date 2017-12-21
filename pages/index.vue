@@ -76,6 +76,12 @@ export default {
   },
   components: {
     VueMarkdown
+  },
+  head: {
+    meta: [
+      { property: 'og:type', content: 'website' },
+      { property: 'og:title', content: 'Mátyás Bittenbinder' }
+    ]
   }
 }
 </script>
