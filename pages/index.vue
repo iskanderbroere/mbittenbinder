@@ -79,6 +79,7 @@ export default {
   },
   head: {
     meta: [
+      { itemprop: 'name', content: 'Mátyás Bittenbinder' },
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'Mátyás Bittenbinder' }
     ]
