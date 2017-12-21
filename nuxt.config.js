@@ -39,7 +39,10 @@ const config = {
     mobileApp: false
   },
   meta: {
-    mobileApp: false
+    mobileApp: false,
+    ogType: null,
+    ogTitle: null,
+    ogDescription: null
   },
   sitemap: {
     hostname: 'https://mbittenbinder.com/',
