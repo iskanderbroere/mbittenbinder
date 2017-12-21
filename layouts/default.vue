@@ -1,7 +1,7 @@
 <template>
   <main>
     <b-navbar class="d-none d-md-flex" type="dark" variant="dark">
-      <b-navbar-brand class="mx-auto headtitle text-uppercase">M&Aacute;ty&Aacute;s Bittenbinder</b-navbar-brand>
+      <b-navbar-brand class="mx-auto headtitle text-uppercase">M&aacute;ty&aacute;s Bittenbinder</b-navbar-brand>
     </b-navbar>
     <navigation />
     <div class="container-top">
