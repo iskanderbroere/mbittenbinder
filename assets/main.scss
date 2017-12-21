@@ -90,8 +90,16 @@ h6 {
   .headtitle {
     font-size: 2rem;
   }
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
 }
 @include media-breakpoint-only(md) {
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+  }
   b-navbar {
     height: inherit;
   }
@@ -193,8 +201,6 @@ html {
   box-shadow: 0 0 0 3px rgba(0,0,0,.5);
 }
 .swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
   background: #fff;
   opacity: 0.4;
 }
