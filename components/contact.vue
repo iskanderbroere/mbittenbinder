@@ -44,7 +44,7 @@
           <b-card title="Contact details" title-tag="h2">
             <dl>
               <dt>Email address</dt>
-              <dd><a href="mailto:mbittenbinder@gmail.com">mbittenbinder@gmail.com</a></dd>
+              <dd><a href="mailto:info@mbittenbinder.com">info@mbittenbinder.com</a></dd>
               <dt>Webdesign</dt>
               <dd><a href="mailto:iskanderbroere@gmail.com">iskanderbroere@gmail.com</a></dd>
             </dl>
