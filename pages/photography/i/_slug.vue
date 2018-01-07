@@ -47,5 +47,6 @@ export default {
 <style lang="scss" scoped>
 img {
   max-height: 80vh;
+  min-height: 75vh;
 }
 </style>
