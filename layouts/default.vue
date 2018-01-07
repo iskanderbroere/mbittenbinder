@@ -1,13 +1,11 @@
 <template>
   <main>
-    <b-navbar class="d-none d-md-flex" type="dark" variant="dark">
-      <b-navbar-brand class="mx-auto headtitle text-uppercase">M&aacute;ty&aacute;s Bittenbinder</b-navbar-brand>
-    </b-navbar>
     <navigation />
     <div class="container-top">
       <nuxt />
     </div>
     <footer>
+      <p class="text-white font-weight-bold" style="text-align:center;">&copy; M&aacute;ty&aacute;s Bittenbinder - 2017</p>
       <no-ssr>
         <CookieLaw
           buttonClass="btn btn-lg btn-primary" />

@@ -1,5 +1,7 @@
 <template>
-  <contact />
+  <b-container fluid>
+    <contact />
+  </b-container>
 </template>
 
 <script>

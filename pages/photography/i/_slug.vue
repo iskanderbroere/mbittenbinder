@@ -43,9 +43,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-img {
-  max-height: 80vh;
-}
-</style>

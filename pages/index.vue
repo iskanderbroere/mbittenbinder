@@ -5,6 +5,7 @@
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper my-swiper">
             <div class="swiper-slide" v-for="banner in albums" :key="banner.sys.id">
+              <!-- <h1 class="text-white d-inline">{{ banner.fields.titel }}</h1><icon class="m-3 d-inline align-middle text-white" name="arrow-right" scale="1.4" /> -->
               <b-card
                 bg-variant="dark"
                 class="text-center"
@@ -12,13 +13,13 @@
                 text-variant="white"
                 border-variant="white"
                 header-tag="header">
-                <div class="card-body">
-                  <h1 class="card-title">{{ banner.fields.titel }}</h1>
-                  <!-- <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p> -->
-                  <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
-                </div>
+                <!-- <div class="card-body">
+                  
+                  <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p> -->
+                  <!-- <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
+                </div>  -->
                 <div class="swiper-zoom-container">
-                  <b-img :src="`${banner.fields.slideImage.fields.file.url}?w=942&h=540&fit=fill`" :alt="banner.fields.slideImage.fields.title" class="card-img-bottom" fluid-grow />
+                  <img :data-src="`${banner.fields.slideImage.fields.file.url}?w=1980&h=1080&fit=fill`" :alt="banner.fields.slideImage.fields.title" class="card-img-bottom swiper-lazy img-fluid w-100" />
                 </div>
               </b-card>
             </div>
@@ -50,12 +51,15 @@ export default {
       return {
         albums: albums.items,
         swiperOption: {
+          preloadImages: false,
+          lazy: {
+            loadPrevNext: true
+          },
           autoplay: {
             delay: 3500
           },
           initialSlide: 0,
           direction: 'horizontal',
-          autoHeight: true,
           setWrapperSize: true,
           keyboard: true,
           pagination: {
@@ -88,8 +92,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.card {
+  border: none;
+}
 .card-img-bottom {
-  max-height: 70vh;
+  max-height: 85vh;
   object-fit: cover;
 }
 </style>

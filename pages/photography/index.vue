@@ -1,30 +1,27 @@
 <template>
   <main>
-    <b-container>
-      <div v-for="album in albums" :key="album.sys.id">
+    <b-container fluid>
+      <div v-for="(album, index) in albums" :key="album.sys.id">
         <h1><b-link class="text-white" :to="'/photography/albums/'+album.fields.slug">{{ album.fields.titel }}</b-link></h1>
         <b-card-group columns class="mb30">
-          <b-card v-for="albumfoto in album.fields.fotosInAlbum"
+          <b-link 
+            v-for="albumfoto in album.fields.fotosInAlbum"
             :key="albumfoto.sys.id"
-            :img-src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-            :img-alt="albumfoto.fields.foto.fields.title"
-            bg-variant="dark"
-            class="text-center"
-            border-variant="white"
-            text-variant="white"
-            img-fluid>
-            <p class="card-text">{{ albumfoto.fields.beschrijving }}</p>
-            <b-btn variant="outline-light" size="lg" block :to="{ name: 'photography-i-slug', params: { slug: albumfoto.fields.slug }}">{{ albumfoto.fields.titel }}</b-btn>
-          </b-card>
+            :to="{ name: 'photography-i-slug', params: { slug: albumfoto.fields.slug }}">
+            <b-card bg-variant="dark" no-body>
+              <b-img class="card-img"
+                v-if="index == 0"
+                fluid
+                :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
+                :alt="albumfoto.fields.foto.fields.title" />
+              <b-img-lazy class="card-img"
+                v-else
+                fluid
+                :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
+                :alt="albumfoto.fields.foto.fields.title" />
+            </b-card>
+          </b-link>
         </b-card-group>
-      <!-- <b-pagination-nav v-if="fotos.length > perPage"
-        hide-goto-end-buttons
-        class="mb30"
-        align="center"
-        base-url="#"
-        aria-controls="Photo gallery pagination"
-        :number-of-pages="Math.ceil((fotos.length / perPage))"
-        v-model="currentPage" /> -->
       </div>
     </b-container>
   </main>
@@ -62,15 +59,16 @@ export default {
 
 <style lang="scss" scoped>
 .card {
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: box-shadow, transform;
-  transition-property: box-shadow, transform;
+  border: none;
+  opacity: 1; 
 }
-.card:hover {
-  box-shadow: 0 10px 10px -10px #343a40;
+.card img {
+  transition-property: opacity, transform;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+.card:hover img {
+  opacity: .7;
+  transform: scale(.98)
 }
 </style>

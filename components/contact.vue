@@ -7,7 +7,7 @@
       <div class="col-md-8">
         <b-card class="mb30s" title="Contact form" title-tag="h2">
           <b-form id="contactForm" method='post' @submit.prevent="handleForm($event)" name="contact" data-netlify="true">
-            <input type='hidden' name='form-name' value='contact' />
+            <input type='hidden' name='form-name' value='contact form' />
             <b-form-group
               label="Name"
               label-for="name">
