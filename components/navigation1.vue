@@ -19,15 +19,6 @@
   </b-navbar>
 </template>
 
-<script>
-import Navbartoggler from '~/components/navbartoggler.vue'
-
-export default {
-  components: {
-    Navbartoggler
-  }
-}
-</script>
 <style scoped lang="scss">
 .container-fluid {
   padding-left: 0;
