@@ -1,7 +1,7 @@
 <template>
   <b-navbar sticky class="mb30" toggleable="md" type="light" variant="light">
     <b-container fluid>
-      <!-- <b-navbar-brand class="text-uppercase">M&aacute;ty&aacute;s Bittenbinder</b-navbar-brand> -->
+      <b-navbar-brand class="text-uppercase d-md-none">M&aacute;ty&aacute;s Bittenbinder</b-navbar-brand>
       <b-navbar-toggle class="ml-auto" target="nav_collapse" />
       <b-collapse is-nav id="nav_collapse">
         <b-navbar-nav>
@@ -43,5 +43,8 @@ export default {
   max-width: 100%;
   max-height: 100%;
   padding-bottom: 2px;
+}
+.navbar-brand {
+  font-weight: 700;
 }
 </style>
