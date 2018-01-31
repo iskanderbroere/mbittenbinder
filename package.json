@@ -6,7 +6,7 @@
   "private": true,
   "engines": {
     "node": ">=8.9.3",
-    "yarn": ">=1.3.2"
+    "yarn": ">=1.3.2 || >=1.4.1-20180119.1606"
   },
   "dependencies": {
     "@nuxtjs/pwa": "^2.0.5",

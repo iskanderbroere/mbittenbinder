@@ -1,0 +1,4 @@
+https://images.contentful.com/dz2m1dfrpkoo/*
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType image/jpg "access plus 1 month"

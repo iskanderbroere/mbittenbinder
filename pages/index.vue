@@ -5,7 +5,6 @@
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper my-swiper">
             <div class="swiper-slide" v-for="banner in albums" :key="banner.sys.id">
-              <!-- <h1 class="text-white d-inline">{{ banner.fields.titel }}</h1><icon class="m-3 d-inline align-middle text-white" name="arrow-right" scale="1.4" /> -->
               <b-card
                 bg-variant="dark"
                 class="text-center"
@@ -13,11 +12,6 @@
                 text-variant="white"
                 border-variant="white"
                 header-tag="header">
-                <!-- <div class="card-body">
-                  
-                  <p class="card-text font-italic">{{ banner.fields.beschrijving }}</p> -->
-                  <!-- <b-btn variant="outline-light" size="sm" :to="`/photography/albums/${banner.fields.slug}`">More</b-btn>
-                </div>  -->
                 <div class="swiper-zoom-container">
                   <img :data-src="`${banner.fields.slideImage.fields.file.url}?w=1980&h=1080&fit=fill`" :alt="banner.fields.slideImage.fields.title" class="card-img-bottom swiper-lazy img-fluid w-100" />
                 </div>
@@ -29,9 +23,6 @@
           <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
         </div>
       </div>
-      <!-- <div class="col-md-6 offset-md-3 mb30">
-        <vue-markdown>{{flip.fields.overFlip}}</vue-markdown>
-      </div> -->
     </b-row>
   </b-container>
 </template>
