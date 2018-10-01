@@ -1,0 +1,12 @@
+[[headers]]
+  for = "https://images.ctfassets.net/dz2m1dfrpkoo/*" # This defines which paths this specific [[headers]] block will cover.
+  [headers.values]
+    ExpiresActive = On
+    ExpiresDefault = "access plus 1 year"
+    ExpiresByType image/jpg = "access plus 1 year"
+    ExpiresByType image/jpeg = "access plus 1 year"
+    Cache-Control = public, max-age=31536000
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
