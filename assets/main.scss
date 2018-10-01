@@ -19,6 +19,10 @@ $container-max-widths: (
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+body {
+  font-display: swap;
+}
+
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
