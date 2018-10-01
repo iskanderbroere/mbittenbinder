@@ -5,9 +5,9 @@
   </b-container>
 </template>
 <script>
-  export default {
-    head: {
-      title: 'Mátyás Bittenbinder - 404'
-    }
+export default {
+  head: {
+    title: "Mátyás Bittenbinder - 404"
   }
+}
 </script>

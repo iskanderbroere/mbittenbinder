@@ -5,14 +5,18 @@
 </template>
 
 <script>
-import contact from '~/components/contact'
+import contact from "~/components/contact"
 
 export default {
-  head () {
+  head() {
     return {
-      title: 'Mátyás Bittenbinder - Contact',
+      title: "Mátyás Bittenbinder - Contact",
       meta: [
-        { hid: 'description', name: 'description', content: 'Contact form and contact details' }
+        {
+          hid: "description",
+          name: "description",
+          content: "Contact form and contact details"
+        }
       ]
     }
   },

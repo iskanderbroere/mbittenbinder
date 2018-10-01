@@ -1,14 +1,8 @@
-const contentful = require('contentful')
-const defaultConfig = {
-  CTF_SPACE_ID: process.env.CTF_SPACE_ID,
-  CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN
-}
+import { createClient as cc } from "contentful"
 
-module.exports = {
-  createClient (config = defaultConfig) {
-    return contentful.createClient({
-      space: config.CTF_SPACE_ID,
-      accessToken: config.CTF_CDA_ACCESS_TOKEN
-    })
-  }
-}
+export const createClient = () =>
+  cc({
+    space: "dz2m1dfrpkoo",
+    accessToken:
+      "cfb5833beb0d50c8f0d50d480f386ce43483a6f1512980ff69c89a6b5fd3c684"
+  })

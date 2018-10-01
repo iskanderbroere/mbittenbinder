@@ -1,21 +1,3 @@
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Spectral Medium'), local('Spectral-Medium'),
-    url('~/assets/fonts/spectral-v4-latin-500.woff2') format('woff2'),
-    url('~/assets/fonts/spectral-v4-latin-500.woff') format('woff'),
-    url('~/assets/fonts/spectral-v4-latin-500.ttf') format('truetype')
-}
-@font-face {
-  font-family: 'Spectral';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Spectral Bold'), local('Spectral-Bold'),
-    url('~/assets/fonts/spectral-v4-latin-700.woff2') format('woff2'),
-    url('~/assets/fonts/spectral-v4-latin-700.woff') format('woff'),
-    url('~/assets/fonts/spectral-v4-latin-700.ttf') format('truetype')
-}
 $blue: #212529 !default;
 $enable-rounded: false !default;
 $border-width: 1px !default;
@@ -35,10 +17,8 @@ $container-max-widths: (
   xl: 1600px
 ) !default;
 
-@import
-  "node_modules/bootstrap/scss/bootstrap",
-  "node_modules/bootstrap-vue/dist/bootstrap-vue",
-  "node_modules/swiper/dist/css/swiper";
+@import "node_modules/bootstrap/scss/bootstrap";
+
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
@@ -182,9 +162,6 @@ html {
   font-family: $font-family-heading;
   text-transform: uppercase !important;
   white-space: normal;
-}
-.fullscreen-v-img {
-  z-index: 1031;
 }
 .text-muted {
   color: #4c4c4c!important;
