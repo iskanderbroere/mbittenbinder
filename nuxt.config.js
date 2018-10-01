@@ -38,7 +38,7 @@ export default {
     lang: "en-US",
     name: "Matyas Bittenbinder",
     display: "minimal-ui",
-    short_name: "M. Bittenbinder",
+    short_name: "Bittenbinder",
     mobileApp: false
   },
   meta: {
