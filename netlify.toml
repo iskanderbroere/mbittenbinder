@@ -1,7 +1,8 @@
 [[headers]]
   for = "https://images.ctfassets.net/dz2m1dfrpkoo/*" # This defines which paths this specific [[headers]] block will cover.
   [headers.values]
-    Cache-Control = public, max-age=31536000
+    Cache-Control = "public, max-age=2628000"
+[[headers]]
   for = "/*"
   [headers.values]
     X-Frame-Options = "DENY"
