@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Spectral';
   font-style: normal;
+  font-display: swap;
   font-weight: 500;
   src: local('Spectral Medium'), local('Spectral-Medium'),
     url('/fonts/spectral-v4-latin-500.woff2') format('woff2'),
@@ -10,6 +11,7 @@
 @font-face {
   font-family: 'Spectral';
   font-style: normal;
+  font-display: swap;
   font-weight: 700;
   src: local('Spectral Bold'), local('Spectral-Bold'),
     url('/fonts/spectral-v4-latin-700.woff2') format('woff2'),
