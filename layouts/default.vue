@@ -1,9 +1,9 @@
 <template>
-  <main>
+  <div>
     <navigation />
-    <div class="container-top">
+    <main class="container-top">
       <nuxt />
-    </div>
+    </main>
     <footer>
       <p class="text-white font-weight-bold" style="text-align:center;">&copy; M&aacute;ty&aacute;s Bittenbinder - 2017</p>
       <no-ssr>
@@ -11,7 +11,7 @@
           button-class="btn btn-lg btn-primary" />
       </no-ssr>
     </footer>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -19,14 +19,6 @@ import navigation from "~/components/navigation1.vue"
 import CookieLaw from "vue-cookie-law"
 
 export default {
-  metaInfo: {
-    htmlAttrs: {
-      lang: "en"
-    }
-  },
-  manifest: {
-    lang: "en"
-  },
   components: {
     navigation,
     CookieLaw
