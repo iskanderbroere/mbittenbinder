@@ -19,6 +19,12 @@ $container-max-widths: (
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+.carousel-indicators li {
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+}
+
 .container-fluid {
   padding-left: 30px;
   padding-right: 30px;
