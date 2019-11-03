@@ -50,18 +50,7 @@ export default {
     generate: true
   },
   build: {
-    transpile: [/\bvue-awesome\b/],
-    extend(config, { isDev, isClient }) {
-      // Run ESLint on save
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    transpile: [/\bvue-awesome\b/]
   },
   plugins: ["~/plugins/vue-awesome"],
   generate: {
