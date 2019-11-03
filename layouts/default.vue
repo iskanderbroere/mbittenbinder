@@ -9,9 +9,9 @@
         &copy; M&aacute;ty&aacute;s Bittenbinder -
         {{ new Date().getFullYear() }}
       </p>
-      <no-ssr>
+      <client-only>
         <CookieLaw button-class="btn btn-lg btn-primary" />
-      </no-ssr>
+      </client-only>
     </footer>
   </div>
 </template>
