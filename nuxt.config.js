@@ -28,11 +28,10 @@ export default {
     "~/assets/fontfaces.css",
     { src: "~/assets/main.scss", lang: "scss" }
   ],
-  modules: [
-    "@nuxtjs/pwa",
-    "@nuxtjs/sitemap",
-    ["bootstrap-vue/nuxt", { css: false }]
-  ],
+  modules: ["@nuxtjs/pwa", "@nuxtjs/sitemap", "bootstrap-vue/nuxt"],
+  bootstrapVue: {
+    bootstrapCSS: false
+  },
   manifest: {
     background_color: "rgba(0,0,0,.7)",
     lang: "en-US",
@@ -46,8 +45,7 @@ export default {
     ogHost: "https://mbittenbinder.com/"
   },
   sitemap: {
-    hostname: "https://mbittenbinder.com/",
-    generate: true
+    hostname: "https://mbittenbinder.com/"
   },
   build: {
     transpile: [/\bvue-awesome\b/]

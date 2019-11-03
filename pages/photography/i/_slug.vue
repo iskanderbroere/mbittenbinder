@@ -1,8 +1,8 @@
 <template>
   <b-container>
     <b-img
-      :src="`${photo.fields.photo.fields.file.url}?w=950`"
-      :alt="photo.fields.photo.fields.title"
+      :src="`${photo.fields.foto.fields.file.url}?w=950`"
+      :alt="photo.fields.foto.fields.title"
       class="mb30 mx-auto d-block"
       fluid
     />
@@ -36,7 +36,7 @@ export default {
         { itemprop: "description", content: this.photo.fields.beschrijving },
         {
           itemprop: "image",
-          content: "https:" + this.photo.fields.photo.fields.file.url + "?w=950"
+          content: "https:" + this.photo.fields.foto.fields.file.url + "?w=950"
         },
         // Facebook / Open Graph
         { property: "og:type", content: "article" },
@@ -48,7 +48,7 @@ export default {
         { property: "og:title", content: this.photo.fields.titel },
         {
           property: "og:image",
-          content: "https:" + this.photo.fields.photo.fields.file.url + "?w=950"
+          content: "https:" + this.photo.fields.foto.fields.file.url + "?w=950"
         },
         {
           property: "og:description",
