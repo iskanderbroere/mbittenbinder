@@ -4,19 +4,29 @@
       <div class="col-12 mb30">
         <b-carousel
           id="carousel1"
-          :interval="3500"
           v-model="slide"
+          :interval="3500"
           style="text-shadow: 1px 1px 2px #333;"
           controls
           indicators
           background="#ababab"
           img-width="1980"
-          img-height="1080">
+          img-height="1080"
+        >
           <b-carousel-slide
-            v-for="banner in albums" :key="banner.sys.id"
+            v-for="banner in albums"
+            :key="banner.sys.id"
             :img-alt="banner.fields.slideImage.fields.title"
-            :img-src="`${banner.fields.slideImage.fields.file.url}?w=1980&h=1080&fit=fill`">
-            <b-link :to="`photography/albums/${banner.fields.slug}`" class="text-white"><h3>{{ banner.fields.titel }}</h3></b-link>
+            :img-src="
+              `${banner.fields.slideImage.fields.file.url}?w=1980&h=1080&fit=fill`
+            "
+          >
+            <b-link
+              :to="`photography/albums/${banner.fields.slug}`"
+              class="text-white"
+            >
+              <h3>{{ banner.fields.titel }}</h3>
+            </b-link>
           </b-carousel-slide>
         </b-carousel>
       </div>
@@ -24,22 +34,23 @@
   </b-container>
 </template>
 <script>
-import { createClient } from "~/plugins/contentful"
+import { createClient } from "~/utils/contentful"
+import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 
 const client = createClient()
 
 export default {
-  async asyncData({ env }) {
-    const { items } = await client.getEntries({
-      content_type: env.CTF_ALBUM
-    })
-    return {
-      albums: items
-    }
-  },
   data() {
     return {
       slide: 0
+    }
+  },
+  async asyncData() {
+    const { items: albums } = await client.getEntries({
+      content_type: CONTENTFUL_ALBUM_TYPE
+    })
+    return {
+      albums
     }
   },
   head: {

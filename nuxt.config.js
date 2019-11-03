@@ -1,4 +1,4 @@
-import { createClient } from "./plugins/contentful"
+import { createClient } from "./utils/contentful"
 const cdaClient = createClient()
 
 export default {
@@ -63,14 +63,10 @@ export default {
       }
     }
   },
-  plugins: [
-    "~/plugins/contentful",
-    "~/plugins/vue-awesome",
-    { src: "~/plugins/vue-resource", ssr: false }
-  ],
+  plugins: ["~/plugins/vue-awesome"],
   generate: {
     async routes() {
-      const [albums, fotos] = await Promise.all([
+      const [albums, photos] = await Promise.all([
         cdaClient.getEntries({
           content_type: "albums"
         }),
@@ -80,14 +76,10 @@ export default {
       ])
       return [
         ...albums.items.map(
-          album => `/photography/albums/${album.fields.slug}`
+          ({ fields: { slug } }) => `/photography/albums/${slug}`
         ),
-        ...fotos.items.map(foto => `/photography/i/${foto.fields.slug}`)
+        ...photos.items.map(({ fields: { slug } }) => `/photography/i/${slug}`)
       ]
     }
-  },
-  env: {
-    CTF_FOTO_POST_TYPE_ID: "fotos",
-    CTF_ALBUM: "albums"
   }
 }
