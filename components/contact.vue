@@ -13,7 +13,7 @@
             data-netlify-honeypot="bot-field"
             @submit.prevent="handleForm"
           >
-            <input type="hidden" name="form-name" value="contact form" />
+            <input type="hidden" name="form-name" value="contact" />
             <b-form-group label="Name" label-for="name">
               <b-form-input v-model="name" type="text" required name="name" />
             </b-form-group>
@@ -65,6 +65,11 @@
 </template>
 
 <script>
+const encodeFormData = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&")
+}
 export default {
   data() {
     return {
@@ -82,9 +87,9 @@ export default {
         message: this.message
       }
       try {
-        await fetch("/contact", {
+        await fetch("/", {
           method: "POST",
-          body: JSON.stringify(body),
+          body: encodeFormData(body),
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
           }
