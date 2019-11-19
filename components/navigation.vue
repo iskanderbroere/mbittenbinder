@@ -15,7 +15,12 @@
           >
             Home
           </b-nav-item>
-          <b-nav-item class="my-auto py-0" to="/photography">
+          <b-nav-item
+            class="my-auto py-0"
+            active-class=""
+            exact-active-class="active"
+            to="/photography"
+          >
             Photography
           </b-nav-item>
           <b-nav-item
