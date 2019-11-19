@@ -3,10 +3,8 @@
     <b-row>
       <div class="col-12 mb30">
         <b-carousel
-          id="carousel1"
           v-model="slide"
           :interval="3500"
-          style="text-shadow: 1px 1px 2px #333;"
           controls
           indicators
           background="#ababab"
@@ -16,17 +14,29 @@
           <b-carousel-slide
             v-for="{
               sys: { id },
-              fields: { slideImage, slug, titel }
+              fields: {
+                slideImage: {
+                  fields: {
+                    title,
+                    file: { url }
+                  }
+                },
+                slug,
+                titel
+              }
             } in albums"
             :key="id"
           >
             <b-img-lazy
               slot="img"
-              :alt="slideImage.fields.title"
-              :src="`${slideImage.fields.file.url}?w=1980&h=1080&fit=fill`"
+              :alt="title"
+              :src="`${url}?w=1980&h=1080&fit=fill`"
               fluid
             />
-            <b-link :to="`photography/albums/${slug}`" class="text-white">
+            <b-link
+              :to="`photography/albums/${slug}`"
+              class="text-white text-shadow"
+            >
               <h3>{{ titel }}</h3>
             </b-link>
           </b-carousel-slide>
@@ -66,11 +76,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-  border: none;
-}
-.card-img-bottom {
-  max-height: 85vh;
-  object-fit: cover;
+.text-shadow {
+  text-shadow: 1px 1px 2px #333;
 }
 </style>
