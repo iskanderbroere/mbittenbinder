@@ -14,18 +14,16 @@
           img-height="1080"
         >
           <b-carousel-slide
-            v-for="banner in albums"
-            :key="banner.sys.id"
-            :img-alt="banner.fields.slideImage.fields.title"
-            :img-src="
-              `${banner.fields.slideImage.fields.file.url}?w=1980&h=1080&fit=fill`
-            "
+            v-for="{
+              sys: { id },
+              fields: { slideImage, slug, titel }
+            } in albums"
+            :key="id"
+            :img-alt="slideImage.fields.title"
+            :img-src="`${slideImage.fields.file.url}?w=1980&h=1080&fit=fill`"
           >
-            <b-link
-              :to="`photography/albums/${banner.fields.slug}`"
-              class="text-white"
-            >
-              <h3>{{ banner.fields.titel }}</h3>
+            <b-link :to="`photography/albums/${slug}`" class="text-white">
+              <h3>{{ titel }}</h3>
             </b-link>
           </b-carousel-slide>
         </b-carousel>

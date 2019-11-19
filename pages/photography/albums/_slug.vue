@@ -5,43 +5,37 @@
     </h1>
     <b-card-group columns class="mb30">
       <b-link
-        v-for="(albumfoto, index) in album.fields.fotosInAlbum"
-        :key="albumfoto.sys.id"
+        v-for="{
+          sys: { id },
+          fields: {
+            slug,
+            foto: {
+              fields: {
+                title,
+                file: {
+                  url,
+                  details: {
+                    image: { width, height }
+                  }
+                }
+              }
+            }
+          }
+        } in album.fields.fotosInAlbum"
+        :key="id"
         :to="{
           name: 'photography-i-slug',
-          params: { slug: albumfoto.fields.slug }
+          params: { slug }
         }"
       >
         <b-card bg-variant="dark" no-body>
           <b-img-lazy
-            v-if="index <= 5"
             :src="
-              albumfoto.fields.foto.fields.file.url +
-                '?w=600&fit=fill&h=' +
-                (Math.ceil(
-                  albumfoto.fields.foto.fields.file.details.image.width /
-                    albumfoto.fields.foto.fields.file.details.image.height
-                ) == 1
-                  ? 650
-                  : 350)
+              `${url}?w=600&fit=fill&h=${
+                imageIsTallerThanWide({ width, height }) ? 650 : 350
+              }`
             "
-            :alt="albumfoto.fields.foto.fields.title"
-            class="card-img"
-            fluid
-          />
-          <b-img-lazy
-            v-else
-            :src="
-              albumfoto.fields.foto.fields.file.url +
-                '?w=600&fit=fill&h=' +
-                (Math.ceil(
-                  albumfoto.fields.foto.fields.file.details.image.width /
-                    albumfoto.fields.foto.fields.file.details.image.height
-                ) == 1
-                  ? 650
-                  : 350)
-            "
-            :alt="albumfoto.fields.foto.fields.title"
+            :alt="title"
             class="card-img"
             fluid
           />
@@ -53,6 +47,7 @@
 
 <script>
 import { createClient } from "~/utils/contentful.js"
+import { imageIsTallerThanWide } from "~/utils"
 import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 
 const client = createClient()
@@ -66,6 +61,9 @@ export default {
     return {
       album: items[0]
     }
+  },
+  methods: {
+    imageIsTallerThanWide: imageIsTallerThanWide
   },
   head() {
     return {
