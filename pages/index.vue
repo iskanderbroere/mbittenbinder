@@ -19,9 +19,13 @@
               fields: { slideImage, slug, titel }
             } in albums"
             :key="id"
-            :img-alt="slideImage.fields.title"
-            :img-src="`${slideImage.fields.file.url}?w=1980&h=1080&fit=fill`"
           >
+            <b-img-lazy
+              slot="img"
+              :alt="slideImage.fields.title"
+              :src="`${slideImage.fields.file.url}?w=1980&h=1080&fit=fill`"
+              fluid
+            />
             <b-link :to="`photography/albums/${slug}`" class="text-white">
               <h3>{{ titel }}</h3>
             </b-link>
