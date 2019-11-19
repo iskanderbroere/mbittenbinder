@@ -1,1 +1,1 @@
-export const imageIsTallerThanWide = ({ width, height }) => width / height < 1
+export const imageIsTallerThanWide = ({ width, height }) => height > width
