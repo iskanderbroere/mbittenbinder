@@ -9,9 +9,9 @@
           <b-form
             id="contactForm"
             name="contact"
-            method="post"
             data-netlify="true"
             data-netlify-honeypot="bot-field"
+            @submit.prevent="handleForm"
           >
             <input type="hidden" name="form-name" value="contact form" />
             <b-form-group label="Name" label-for="name">
@@ -71,6 +71,27 @@ export default {
       name: "",
       email: "",
       message: ""
+    }
+  },
+  methods: {
+    async handleForm() {
+      const body = {
+        "form-name": "contact",
+        name: this.name,
+        email: this.email,
+        message: this.message
+      }
+      try {
+        await fetch("/contact", {
+          method: "POST",
+          body: JSON.stringify(body),
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          }
+        })
+        this.$router.push("/thank-you")
+        // eslint-disable-next-line no-empty
+      } catch (error) {}
     }
   }
 }
