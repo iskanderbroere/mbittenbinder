@@ -58,6 +58,15 @@ import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 const client = createClient()
 
 export default {
+  async asyncData({ params: { slug } }) {
+    const { items } = await client.getEntries({
+      content_type: CONTENTFUL_ALBUM_TYPE,
+      "fields.slug": slug
+    })
+    return {
+      album: items[0]
+    }
+  },
   head() {
     return {
       title: `Mátyás Bittenbinder - ${this.album.fields.titel}`,
@@ -68,15 +77,6 @@ export default {
           content: "Mátyás Bittenbinder"
         }
       ]
-    }
-  },
-  async asyncData({ params: { slug } }) {
-    const { items } = await client.getEntries({
-      content_type: CONTENTFUL_ALBUM_TYPE,
-      "fields.slug": slug
-    })
-    return {
-      album: items[0]
     }
   }
 }

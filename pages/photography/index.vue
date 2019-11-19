@@ -86,6 +86,14 @@ import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 const client = createClient()
 
 export default {
+  async asyncData() {
+    const { items } = await client.getEntries({
+      content_type: CONTENTFUL_ALBUM_TYPE
+    })
+    return {
+      albums: items
+    }
+  },
   head: {
     title: "Mátyás Bittenbinder - Photography",
     meta: [
@@ -95,14 +103,6 @@ export default {
         content: "All photographs by Mátyás Bittenbinder"
       }
     ]
-  },
-  async asyncData() {
-    const { items } = await client.getEntries({
-      content_type: CONTENTFUL_ALBUM_TYPE
-    })
-    return {
-      albums: items
-    }
   }
 }
 </script>

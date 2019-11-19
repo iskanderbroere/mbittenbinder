@@ -40,17 +40,17 @@ import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 const client = createClient()
 
 export default {
-  data() {
-    return {
-      slide: 0
-    }
-  },
   async asyncData() {
     const { items: albums } = await client.getEntries({
       content_type: CONTENTFUL_ALBUM_TYPE
     })
     return {
       albums
+    }
+  },
+  data() {
+    return {
+      slide: 0
     }
   },
   head: {

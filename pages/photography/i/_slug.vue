@@ -22,6 +22,15 @@ import { CONTENTFUL_PHOTO_TYPE } from "~/constants"
 const client = createClient()
 
 export default {
+  async asyncData({ params: { slug } }) {
+    const { items } = await client.getEntries({
+      content_type: CONTENTFUL_PHOTO_TYPE,
+      "fields.slug": slug
+    })
+    return {
+      photo: items[0]
+    }
+  },
   head() {
     return {
       title: `Mátyás Bittenbinder - ${this.photo.fields.titel}`,
@@ -57,15 +66,6 @@ export default {
             : this.photo.fields.titel
         }
       ]
-    }
-  },
-  async asyncData({ params: { slug } }) {
-    const { items } = await client.getEntries({
-      content_type: CONTENTFUL_PHOTO_TYPE,
-      "fields.slug": slug
-    })
-    return {
-      photo: items[0]
     }
   }
 }
