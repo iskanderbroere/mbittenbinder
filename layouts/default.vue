@@ -9,21 +9,16 @@
         &copy; M&aacute;ty&aacute;s Bittenbinder -
         {{ new Date().getFullYear() }}
       </p>
-      <client-only>
-        <CookieLaw button-class="btn btn-lg btn-primary" />
-      </client-only>
     </footer>
   </div>
 </template>
 
 <script>
 import navigation from "~/components/navigation.vue"
-import CookieLaw from "vue-cookie-law"
 
 export default {
   components: {
-    navigation,
-    CookieLaw
+    navigation
   }
 }
 </script>
