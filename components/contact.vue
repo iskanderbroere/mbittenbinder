@@ -65,9 +65,12 @@
 </template>
 
 <script>
-const encodeFormData = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+function encodeFormData(data) {
+  return Object.entries(data)
+    .map(
+      ([key, value]) =>
+        `${encodeURIComponent(key)}=${encodeURIComponent(value)}`
+    )
     .join("&")
 }
 export default {
@@ -86,10 +89,11 @@ export default {
         email: this.email,
         message: this.message
       }
+      const encodedBody = encodeFormData(body)
       try {
         await fetch("/", {
           method: "POST",
-          body: encodeFormData(body),
+          body: encodedBody,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded"
           }
