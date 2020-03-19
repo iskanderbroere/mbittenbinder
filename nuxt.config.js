@@ -48,7 +48,21 @@ export default {
     hostname: "https://mbittenbinder.com/"
   },
   build: {
-    transpile: [/\bvue-awesome\b/]
+    transpile: [/\bvue-awesome\b/],
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve("@nuxt/babel-preset-app"),
+            // require.resolve('@nuxt/babel-preset-app-edge'), // For nuxt-edge users
+            {
+              buildTarget: isServer ? "server" : "client",
+              corejs: { version: 3 }
+            }
+          ]
+        ]
+      }
+    }
   },
   plugins: ["~/plugins/vue-awesome"],
   generate: {
