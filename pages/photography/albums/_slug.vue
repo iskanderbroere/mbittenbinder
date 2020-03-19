@@ -1,24 +1,44 @@
 <template>
   <b-container fluid>
-    <h1 class="text-white">{{ album.fields.titel }}</h1>
+    <h1 class="text-white">
+      {{ album.fields.titel }}
+    </h1>
     <b-card-group columns class="mb30">
       <b-link
-        v-for="(albumfoto, index) in album.fields.fotosInAlbum"
-        :key="albumfoto.sys.id"
-        :to="{ name: 'photography-i-slug', params: { slug: albumfoto.fields.slug }}">
+        v-for="{
+          sys: { id },
+          fields: {
+            slug,
+            foto: {
+              fields: {
+                title,
+                file: {
+                  url,
+                  details: {
+                    image: { width, height }
+                  }
+                }
+              }
+            }
+          }
+        } in album.fields.fotosInAlbum"
+        :key="id"
+        :to="{
+          name: 'photography-i-slug',
+          params: { slug }
+        }"
+      >
         <b-card bg-variant="dark" no-body>
           <b-img-lazy
-            v-if="index <= 5"
-            :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-            :alt="albumfoto.fields.foto.fields.title"
+            :src="
+              `${url}?w=600&fit=fill&h=${
+                imageIsTallerThanWide({ width, height }) ? 650 : 350
+              }`
+            "
+            :alt="title"
             class="card-img"
-            fluid />
-          <b-img-lazy
-            v-else
-            :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-            :alt="albumfoto.fields.foto.fields.title"
-            class="card-img"
-            fluid />
+            fluid
+          />
         </b-card>
       </b-link>
     </b-card-group>
@@ -26,11 +46,25 @@
 </template>
 
 <script>
-import { createClient } from "~/plugins/contentful.js"
+import { createClient } from "~/utils/contentful.js"
+import { imageIsTallerThanWide } from "~/utils"
+import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 
 const client = createClient()
 
 export default {
+  async asyncData({ params: { slug } }) {
+    const { items } = await client.getEntries({
+      content_type: CONTENTFUL_ALBUM_TYPE,
+      "fields.slug": slug
+    })
+    return {
+      album: items[0]
+    }
+  },
+  methods: {
+    imageIsTallerThanWide: imageIsTallerThanWide
+  },
   head() {
     return {
       title: `Mátyás Bittenbinder - ${this.album.fields.titel}`,
@@ -41,15 +75,6 @@ export default {
           content: "Mátyás Bittenbinder"
         }
       ]
-    }
-  },
-  async asyncData({ env, params }) {
-    const { items } = await client.getEntries({
-      content_type: env.CTF_ALBUM,
-      "fields.slug": params.slug
-    })
-    return {
-      album: items[0]
     }
   }
 }

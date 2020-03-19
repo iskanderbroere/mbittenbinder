@@ -1,4 +1,4 @@
-import { createClient } from "./plugins/contentful"
+import { createClient } from "./utils/contentful"
 const cdaClient = createClient()
 
 export default {
@@ -28,11 +28,10 @@ export default {
     "~/assets/fontfaces.css",
     { src: "~/assets/main.scss", lang: "scss" }
   ],
-  modules: [
-    "@nuxtjs/pwa",
-    "@nuxtjs/sitemap",
-    ["bootstrap-vue/nuxt", { css: false }]
-  ],
+  modules: ["@nuxtjs/pwa", "@nuxtjs/sitemap", "bootstrap-vue/nuxt"],
+  bootstrapVue: {
+    bootstrapCSS: false
+  },
   manifest: {
     background_color: "rgba(0,0,0,.7)",
     lang: "en-US",
@@ -46,31 +45,28 @@ export default {
     ogHost: "https://mbittenbinder.com/"
   },
   sitemap: {
-    hostname: "https://mbittenbinder.com/",
-    generate: true
+    hostname: "https://mbittenbinder.com/"
   },
   build: {
     transpile: [/\bvue-awesome\b/],
-    extend(config, { isDev, isClient }) {
-      // Run ESLint on save
-      if (isDev && isClient) {
-        config.module.rules.push({
-          enforce: "pre",
-          test: /\.(js|vue)$/,
-          loader: "eslint-loader",
-          exclude: /(node_modules)/
-        })
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve("@nuxt/babel-preset-app"),
+            {
+              buildTarget: isServer ? "server" : "client",
+              corejs: { version: 3 }
+            }
+          ]
+        ]
       }
     }
   },
-  plugins: [
-    "~/plugins/contentful",
-    "~/plugins/vue-awesome",
-    { src: "~/plugins/vue-resource", ssr: false }
-  ],
+  plugins: ["~/plugins/vue-awesome"],
   generate: {
     async routes() {
-      const [albums, fotos] = await Promise.all([
+      const [albums, photos] = await Promise.all([
         cdaClient.getEntries({
           content_type: "albums"
         }),
@@ -80,14 +76,10 @@ export default {
       ])
       return [
         ...albums.items.map(
-          album => `/photography/albums/${album.fields.slug}`
+          ({ fields: { slug } }) => `/photography/albums/${slug}`
         ),
-        ...fotos.items.map(foto => `/photography/i/${foto.fields.slug}`)
+        ...photos.items.map(({ fields: { slug } }) => `/photography/i/${slug}`)
       ]
     }
-  },
-  env: {
-    CTF_FOTO_POST_TYPE_ID: "fotos",
-    CTF_ALBUM: "albums"
   }
 }

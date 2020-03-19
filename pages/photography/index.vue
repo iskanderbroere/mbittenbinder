@@ -1,32 +1,69 @@
 <template>
   <b-container fluid>
-    <div v-for="(album, index) in albums" :key="album.sys.id">
-      <h1><b-link :to="'/photography/albums/'+album.fields.slug" class="text-white">{{ album.fields.titel }}</b-link></h1>
+    <div
+      v-for="{
+        fields: { slug: albumSlug, titel: albumTitel, fotosInAlbum },
+        sys: { id: albumId }
+      } in albums"
+      :key="albumId"
+    >
+      <h1>
+        <b-link :to="`/photography/albums/${albumSlug}`" class="text-white">
+          {{ albumTitel }}
+        </b-link>
+      </h1>
       <b-card-group columns class="mb30">
         <b-link
-          v-for="albumfoto in album.fields.fotosInAlbum"
-          :key="albumfoto.sys.id"
-          :to="{ name: 'photography-i-slug', params: { slug: albumfoto.fields.slug }}">
+          v-for="{
+            fields: {
+              slug,
+              foto: {
+                fields: {
+                  title,
+                  file: {
+                    url,
+                    details: {
+                      image: { width, height }
+                    }
+                  }
+                }
+              }
+            },
+            sys: { id }
+          } in fotosInAlbum"
+          :key="id"
+          :to="{
+            name: 'photography-i-slug',
+            params: { slug }
+          }"
+        >
           <b-card bg-variant="dark" no-body>
-            <b-img
-              v-if="index === 0"
-              :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-              :alt="albumfoto.fields.foto.fields.title"
-              :width="600"
-              :height="((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-              fluid-grow
-              class="card-img"
-              fluid />
             <b-img-lazy
-              v-else
-              :src="albumfoto.fields.foto.fields.file.url + '?w=600&fit=fill&h=' + ((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
-              :alt="albumfoto.fields.foto.fields.title"
+              :src="
+                `${url}?w=600&fit=fill&h=${
+                  imageIsTallerThanWide({
+                    width,
+                    height
+                  })
+                    ? 650
+                    : 350
+                }`
+              "
+              :alt="title"
               :width="600"
-              :height="((Math.ceil(albumfoto.fields.foto.fields.file.details.image.width / albumfoto.fields.foto.fields.file.details.image.height)) == 1 ? 650 : 350)"
+              :height="
+                imageIsTallerThanWide({
+                  width,
+                  height
+                })
+                  ? 650
+                  : 350
+              "
               blank-color="black"
               fluid-grow
               class="card-img"
-              fluid />
+              fluid
+            />
           </b-card>
         </b-link>
       </b-card-group>
@@ -35,11 +72,24 @@
 </template>
 
 <script>
-import { createClient } from "~/plugins/contentful.js"
+import { createClient } from "~/utils/contentful.js"
+import { imageIsTallerThanWide } from "~/utils"
+import { CONTENTFUL_ALBUM_TYPE } from "~/constants"
 
 const client = createClient()
 
 export default {
+  async asyncData() {
+    const { items } = await client.getEntries({
+      content_type: CONTENTFUL_ALBUM_TYPE
+    })
+    return {
+      albums: items
+    }
+  },
+  methods: {
+    imageIsTallerThanWide: imageIsTallerThanWide
+  },
   head: {
     title: "Mátyás Bittenbinder - Photography",
     meta: [
@@ -49,14 +99,6 @@ export default {
         content: "All photographs by Mátyás Bittenbinder"
       }
     ]
-  },
-  async asyncData({ env }) {
-    const { items } = await client.getEntries({
-      content_type: env.CTF_ALBUM
-    })
-    return {
-      albums: items
-    }
   }
 }
 </script>

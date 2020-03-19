@@ -8,6 +8,9 @@
 import contact from "~/components/contact"
 
 export default {
+  components: {
+    contact
+  },
   head() {
     return {
       title: "Mátyás Bittenbinder - Contact",
@@ -19,9 +22,6 @@ export default {
         }
       ]
     }
-  },
-  components: {
-    contact
   }
 }
 </script>
