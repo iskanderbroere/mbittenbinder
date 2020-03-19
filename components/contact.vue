@@ -52,9 +52,7 @@
               </dd>
               <dt>Webdesign</dt>
               <dd>
-                <a href="mailto:iskanderbroere@gmail.com"
-                  >iskanderbroere@gmail.com</a
-                >
+                <a href="https://iskanderbroere.nl/">iskanderbroere.nl</a>
               </dd>
             </dl>
           </b-card>
